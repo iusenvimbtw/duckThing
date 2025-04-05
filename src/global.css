@@ -35,18 +35,37 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+/* --- Dark Theme Defaults --- */
+html {
   height: 100%;
   width: 100%;
+  background-color: #1a1a1a; /* Apply dark background to HTML root */
 }
 
 body {
+  height: 100%; /* Ensure body takes full height */
+  width: 100%;  /* Ensure body takes full width */
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
-  color: #1a1a1a;
+  /* Background set on HTML, body should inherit or be transparent */
+  /* You can explicitly set it here too for robustness: */
+  /* background-color: #1a1a1a; */
+  color: #f5f5f5; /* Light text for the whole page */
 }
+
+/* Ensure the #app div doesn't have its own background */
+#app {
+  height: 100%;
+  width: 100%;
+  background-color: transparent; /* Make sure app div is transparent */
+}
+
+/* Also target the container div added in JS */
+#app > div {
+   background-color: transparent; /* Make sure inner container is also transparent */
+}
+
 
 h1,
 h2,
@@ -56,13 +75,15 @@ h5,
 h6 {
   font-weight: 600;
   line-height: 1.2;
+  color: #f5f5f5; /* Ensure headings are also light */
 }
 
 a {
-  color: #444444;
+  color: #bbbbbb; /* Lighter link color for dark bg */
+  text-decoration: none;
 }
 a:hover {
-  color: #888888;
+  color: #eeeeee; /* Brighter hover link color */
 }
 
 button {
@@ -77,7 +98,6 @@ textarea {
   font: inherit;
 }
 
-/* Add these new styles */
 .url-container {
   display: flex;
   align-items: center;
@@ -85,25 +105,25 @@ textarea {
   margin-top: 16px;
 }
 
-/* Add this new style */
 .content-container {
   max-width: 36rem;
   text-align: center;
   padding: 0 8px;
+  background-color: transparent; /* Make sure content container is transparent */
 }
 
-/* Update url-input width to be 100% since container will control max width */
 .url-input {
   padding: 8px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #555555; /* Subtle dark border */
   border-radius: 4px;
   width: 100%;
-  background: #f5f5f5;
+  background: #333333; /* Darker input background */
+  color: #f5f5f5;        /* Light text in input */
 }
 
 .copy-button {
   padding: 8px;
-  color: #666;
+  color: #bbbbbb; /* Light icon/text color for button */
   border-radius: 4px;
   transition: all 0.2s;
   display: flex;
@@ -112,23 +132,31 @@ textarea {
 }
 
 .copy-button:hover {
-  background: #f0f0f0;
+  background: #444444; /* Slightly lighter dark background on hover */
 }
 
 .copy-button:active {
-  background: #e5e5e5;
+  background: #555555; /* Even lighter dark background on active */
 }
 
 .copy-button img {
   width: 20px;
   height: 20px;
+  /* Optional: Filter to make dark icons light if needed */
+   filter: invert(85%) sepia(0%) saturate(200%) hue-rotate(190deg) brightness(95%) contrast(90%); /* Filter to make icons approx #bbbbbb */
 }
 
 .copy-button.copied {
-  background: #28a745;
+  background: #28a745; /* Keep success green */
+  color: #ffffff; /* Ensure icon/text inside is white */
+}
+.copy-button.copied img {
+   /* Ensure filter is removed or set for white icon on green if needed */
+   /* Make icon white on green background */
+  filter: brightness(0) invert(1);
 }
 
-/* Add footer styles */
+
 .footer {
   position: fixed;
   bottom: 16px;
@@ -136,15 +164,15 @@ textarea {
   right: 0;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #aaaaaa; /* Dimmer light text for footer */
 }
 
 .footer a {
-  color: #666;
-  text-decoration: none;
+  color: #aaaaaa; /* Footer link color */
   font-weight: 500;
 }
 
 .footer a:hover {
-  color: #333;
+  color: #dddddd; /* Brighter footer link hover */
 }
+/* --- End Dark Theme Defaults --- */
