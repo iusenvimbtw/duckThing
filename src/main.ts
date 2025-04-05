@@ -12,7 +12,7 @@ function noSearchDefaultPageRender() {
           <input 
             type="text" 
             class="url-input"
-            value="https://duckthing.rontize.tech?q=%s"
+            value="https://duckthing.vercel.app?q=%s"
             readonly 
           />
           <button class="copy-button">
