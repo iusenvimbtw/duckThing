@@ -7,7 +7,7 @@ export const bangs = [
     r: 0,
     s: "T3 Chat",
     sc: "AI",
-    t: "t3",
+    t: "cgt",
     u: "https://www.chatgpt.com/?temporary-chat=true&q={{{s}}}",
   },
   {
