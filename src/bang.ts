@@ -16811,15 +16811,6 @@ export const bangs = [
     u: "http://catalog.gpo.gov/F?func=find-b&find_code=WRD&request={{{s}}}",
   },
   {
-    c: "Tech",
-    d: "www.cgtrader.com",
-    r: 0,
-    s: "cgtrader",
-    sc: "Design",
-    t: "cgt",
-    u: "https://www.cgtrader.com/3d-models?keywords={{{s}}}",
-  },
-  {
     c: "Research",
     d: "resources.allsetlearning.com",
     r: 0,
