@@ -8,7 +8,7 @@ export const bangs = [
     s: "Local host 1",
     sc: "",
     t: "lc3",
-    u: "localhost:3000/{{{s}}}",
+    u: "http://localhost:3000/{{{s}}}",
    },
    {
     c: "Chat-gpt temporary",
