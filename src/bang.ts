@@ -2,6 +2,15 @@
 
 export const bangs = [
    {
+    c: "Local Host 3000",
+    d: "localhost:3000",
+    r: 0,
+    s: "Local host 1",
+    sc: "",
+    t: "lc3",
+    u: "localhost:3000/{{{s}}}",
+   },
+   {
     c: "Chat-gpt temporary",
     d: "www.chatgpt.com/",
     r: 0,
@@ -60542,15 +60551,6 @@ export const bangs = [
     sc: "Academic",
     t: "lcid",
     u: "http://id.loc.gov/search/?q={{{s}}}&q=",
-  },
-  {
-    c: "Tech",
-    d: "laracasts.com",
-    r: 3,
-    s: "Laracasts",
-    sc: "Libraries/Frameworks",
-    t: "lc",
-    u: "https://laracasts.com/search?q={{{s}}}",
   },
   {
     c: "Research",
