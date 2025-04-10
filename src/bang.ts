@@ -2,12 +2,21 @@
 
 export const bangs = [
    {
+    c: "Local Host 5000",
+    d: "localhost:5000",
+    r: 0,
+    s: "Local host 2",
+    sc: "",
+    t: "lc%",
+    u: "http://localhost:5173/{{{s}}}",
+   },
+   {
     c: "Local Host 3000",
     d: "localhost:3000",
     r: 0,
     s: "Local host 1",
     sc: "",
-    t: "lc3",
+    t: "lc}",
     u: "http://localhost:3000/{{{s}}}",
    },
    {
